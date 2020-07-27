@@ -20,10 +20,10 @@ public class Poll {
 		String topics[] = {"Pizza", "Fries", "Salads", "Chicken", "Cookies"};
 		
 		int responses[][] = { {0,0,0,0,0,0,0,0,0,0},
-							  {0,0,0,0,0,0,0,0,0,0},
-							  {0,0,0,0,0,0,0,0,0,0},
-							  {0,0,0,0,0,0,0,0,0,0},
-							  {0,0,0,0,0,0,0,0,0,0}
+				      {0,0,0,0,0,0,0,0,0,0},
+				      {0,0,0,0,0,0,0,0,0,0},
+				      {0,0,0,0,0,0,0,0,0,0},
+				      {0,0,0,0,0,0,0,0,0,0}
 		};
 		
 		System.out.println("This is a poll.");
@@ -31,24 +31,24 @@ public class Poll {
 			
 		while (flag == 0) {
 			for(i = 0; i < 5; i++) {
-			System.out.printf("%s", topics[i]);
-			
-			System.out.println("");
-			
-			int score = input.nextInt();
-			
-			responses[i][score-1] = +1;
-			
-			if (i == 0)
-				first_row_sum += score;
-			if (i == 1)
-				second_row_sum += score;
-			if (i == 2)
-				third_row_sum += score;
-			if (i == 3)
-				fourth_row_sum += score;
-			if (i == 4)
-				fifth_row_sum += score;
+				System.out.printf("%s", topics[i]);
+
+				System.out.println("");
+
+				int score = input.nextInt();
+
+				responses[i][score-1] += 1;
+
+				if (i == 0)
+					first_row_sum += score;
+				if (i == 1)
+					second_row_sum += score;
+				if (i == 2)
+					third_row_sum += score;
+				if (i == 3)
+					fourth_row_sum += score;
+				if (i == 4)
+					fifth_row_sum += score;
 			}
 				
 			if (i == 5) {
